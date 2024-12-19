@@ -1,0 +1,13 @@
+#app,body,html{
+  padding:0px;
+  margin:0px;
+  width:100vw;
+  overflow-x:hidden;
+}
+ul{
+  list-style:none;
+}
+.content{
+  width:100vw;
+  height:auto;
+}

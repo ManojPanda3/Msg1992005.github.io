@@ -1,0 +1,132 @@
+/* NavBar */ 
+.navbar{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  transition:all 500ms ease-in-out;
+  transform:translateY(-50%);
+  opacity:0;
+
+  &.show{
+    transform:translateY(0);
+    opacity:1;
+  }
+
+
+  &>ul{
+    align-items:center;
+    display:flex;
+    gap:0.65rem;
+    padding:1.25rem;
+    margin:0px;
+    &>li{
+      cursor: pointer;
+    }
+  }
+  &>ul.social_media>li{
+    width: 1.5rem;
+    &>svg{
+      transition:all 500ms ease-in-out;
+    }
+    &:hover>svg{
+      fill:var(--foreground);
+    }
+  }
+  &>ul.tab>li{
+    transition:all 500ms ease-in-out;
+    color:gray;
+    font-weight:bold;
+    &:hover{
+      color:var(--foreground);
+    }
+  }
+}
+/*heroPage*/
+.heropage{
+  height: 70vh;
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+  gap:0px;
+  justify-content:center;
+  text-align:center;
+  transition:all 500ms ease-in-out,color 1.25s ease;
+  transform:translateY(100px);
+  opacity:0;
+  color:gray;
+  &.show{
+    transform:translateY(0px);
+    opacity:1;
+    color:var(--foreground);
+  }
+  &>*{
+    padding:0px;
+    margin:0px;
+  }
+  &>h2{
+    font-size:2rem;
+    font-weight:bold;
+  }
+  &>p{
+    font-size:10px;
+  }
+}
+/*About*/
+.about{
+  &>h1{
+    width:100vw;
+    padding:0px;
+    text-align:center;
+  }
+
+}
+.aboutme{
+  color:var(--color-1);
+  &>i>b{
+    text-decoration:underline;
+    cursor:pointer;
+    position:relative;
+    transition:color 250ms ease;
+  color:var(--color-2);
+    &:hover{
+    color:var(--foreground);
+    }
+    &:hover::after{
+      content:"";
+      background-image:"";
+      position:absolute;
+      top:75%;
+      width:2rem;
+      border-radius:4px;
+      aspect-ratio:1/1;
+      background-size: cover;  
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &:nth-child(1)::after{
+      background-image:url("/js.webp");
+    }
+    &:nth-child(2)::after{
+      background-image:url("/react.webp");
+    }
+    &:nth-child(3)::after{
+      background-image:url("/python.svg");
+    }
+    &:nth-child(4)::after{
+      background-image:url("/scikit-learn.webp");
+    }
+    &:nth-child(5)::after{
+      background-image:url("/numpy.svg");
+    }
+    &:nth-child(6)::after{
+      background-image:url("/pandas.webp");
+    }
+    &:nth-child(7)::after{
+      background-image:url("/tensorflow.webp");
+    }
+    &:nth-child(8)::after{
+      background-image:url("/c.webp");
+    }
+  }
+}
